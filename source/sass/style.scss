@@ -1,9 +1,9 @@
 @import "variables.scss";
 @import "fonts.scss";
 @import "global.scss";
-body {
-  font-family: "PT Sans", "Arial", sans-serif;
-  text-transform: uppercase;
-
-}
-
+@import "../sass/blocks/page.scss";
+@import "../sass/blocks/page-header.scss";
+@import "../sass/blocks/greetings.scss";
+@import "../sass/blocks/advantages.scss";
+@import "../sass/blocks/proposition.scss";
+@import "../sass/blocks/page-footer.scss";
