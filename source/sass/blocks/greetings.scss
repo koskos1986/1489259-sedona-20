@@ -1,11 +1,12 @@
 .greetings {
   position: relative;
   min-height: 389px;
-  min-width:320px;
+  min-width: 320px;
   background-image: url("../img/bg-back-mobile@1x.jpg"), linear-gradient(to right bottom, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .greetings::after {
   position: absolute;
   top: 363px;
