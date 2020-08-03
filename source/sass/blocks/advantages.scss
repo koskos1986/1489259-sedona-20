@@ -1,0 +1,38 @@
+.advantages__intro {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages__list-special-title,
+.advantages__list-features-title,
+.advantages__list-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantages__list-special-wrapper {
+  background-color: $light-blue;
+  color: $white;
+}
+
+.advantages__list-special-number,
+.advantages__list-special-text,
+.advantages__list-features-text,
+.advantages__list-text,
+.advantages__list-number {
+  line-height: 21px;
+}
+
+.advantages__list-item {
+  background-color: $grey-background;
+}

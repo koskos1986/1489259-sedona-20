@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header-logo">
-        <img src="" alt="">
+        <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
@@ -29,11 +30,11 @@
         </button>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main container">
       <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
       <section class="greetings">
         <h2 class="visually-hidden">Приветствуем в прекрасной Седоне, потому что Большой Каньон- отстой!</h2>
-        <img src="https://via.placeholder.com/150x150" width="" height="" alt="Добро пожаловать в восхитительную Седону" class="greetings__title">
+        <img src="img/text-sedona-index.svg" width="282" height="214" alt="Добро пожаловать в восхитительную Седону" class="greetings__title">
       </section>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
@@ -41,15 +42,15 @@
           <p class="advantages__intro">Седона – небольшой городок в Аризоне, заслуживающий большего!</p>
           <p class="advantages__text">Рассмотрим 5 причин, по которым Седона круче,чем Гранд Каньон!</p>
         </div>
-        <ol class="advantages__list">
+        <ol class="advantages__list site-list">
           <li class="advantages__list-special-item">
             <div class="advantages__list-special-wrapper">
               <h3 class="advantages__list-special-title">Настоящий городок</h3>
               <p class="advantages__list-special-number">-№1-</p>
               <p class="advantages__list-special-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img src="https://via.placeholder.com/150x150" width="" height="" alt="Вид отеля в городке">
-            <ul class="advantages__list-features">
+            <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Вид отеля в городке">
+            <ul class="advantages__list-features site-list">
               <li class="advantages__list-features-item advantages__list-features-item--house">
                 <span class="advantages__list-features-title">Жилье</span>
                 <p class="advantages__list-features-text">рекомендуем пожить в настоящем мотеле,все как в кино!
@@ -66,7 +67,7 @@
             </ul>
           </li>
           <li class="advantages__list-special-item">
-            <img src="https://via.placeholder.com/150x150" width="" height="" alt="Вид на мост Дьявола">
+            <img src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Вид на мост Дьявола">
             <div class="advantages__list-special-wrapper">
               <h3 class="advantages__list-special-title">Там есть мост дьявола</h3>
               <p class="advantages__list-special-number">-№2-</p>
@@ -94,24 +95,25 @@
         <h2 class="proposition__title">Заинтересовались?</h2>
         <p class="proposition__text">Укажите предполагаемые даты поездки,И мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <div class="proposition__form-wrapper">
-          <button class="proposition__form-button button"></button>
+          <button class="proposition__form-button button">Найти гостиницу</button>
         </div>
       </section>
       <section class="map">
-        <h2 class="visuall-hidden">Карта местонахождения Седоны</h2>
+        <h2 class="visually-hidden">Карта местонахождения Седоны</h2>
         <div class="map__wrapper"></div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <p class="page-footer__contacts contacts">#visitsedona</p>
-      <ul class="page-footer__social social">
+      <ul class="page-footer__social social site-list">
         <li class="social__item"><a href="#" class="social__link">Твиттер</a></li>
         <li class="social__item"><a href="#" class="social__link">Фейсбук</a></li>
         <li class="social__item"><a href="#" class="social__link">Ютуб</a></li>
       </ul>
       <div class="page-footer__developer developer">
         <p class="developer__text">Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="developer__link">HTML Academy</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="developer__link" aria-label="Переход на сайт Академии">
+        <img src="img/logo-htmlacademy.svg" alt="Переход на сайт Академии" class="academy-logo"></a>
       </div>
     </footer>
   </body>
