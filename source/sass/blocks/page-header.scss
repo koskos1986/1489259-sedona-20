@@ -1,10 +1,22 @@
-.main-nav__list {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
-  background-color: $light-blue;
+.page-header {
+  position: relative;
+
+  min-width: 56px;
 }
 
-.main-nav__list a {
-  color: $white;
+.page-header-logo {
+  position: absolute;
+  top: 160px;
+  left: calc((100% - 102px) / 2);
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    //left: calc((100% - 187px) / 2);
+  }
 }

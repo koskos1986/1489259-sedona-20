@@ -1,0 +1,36 @@
+.developer {
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    padding-top: 43px;
+    padding-right: 60px;
+    padding-bottom: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 120px;
+  }
+}
+
+.developer__text {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: normal;
+}
+
+.developer__link {
+  display: block;
+  margin-left: 8px;
+}
+
+.developer img {
+  vertical-align: middle;
+
+  box-sizing: content-box;
+}

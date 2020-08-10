@@ -16,4 +16,15 @@
   content: "";
   background-image: url("../img/bg-intro-triangle-mobile.svg");
   background-repeat: no-repeat;
+
+  /* Достилизовать при работе над этим блоком
+  @media (min-width: $tablet-width) {
+    top: 363px;
+    min-width: 768px;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+  } */
 }
