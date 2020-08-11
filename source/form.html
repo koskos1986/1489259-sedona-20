@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Форма отзыва</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -36,20 +36,20 @@
         <fieldset class="form__meeting">
           <legend>Представьтесь</legend>
           <label for="name">Имя*:</label>
-          <input id="name" type="text" placeholder="Петр">
+          <input id="name" type="text" placeholder="Петр" required>
           <label for="surname">Фамилия*:</label>
-          <input id="surname" type="text">
+          <input id="surname" type="text" required>
           <label for="middle-name">Отчество:</label>
           <input id="middle-name" type="text">
         </fieldset>
         <fieldset class="form__contacts">
           <legend class="form__legend">Контактная информация:</legend>
           <label for="phone">Контактный телефон*:</label>
-          <input id="phone" type="text" placeholder="Введите телефон">
-          <button class="form__button button-phone"></button>
+          <input id="phone" type="text" placeholder="Введите телефон" required>
+          <button class="form__button button-phone" type="button"></button>
           <label for="email">Электронная почта*:</label>
-          <input id="email" type="text" placeholder="Введите e-mail">
-          <button class="form__button button-email"></button>
+          <input id="email" type="text" placeholder="Введите e-mail" required>
+          <button class="form__button button-email" type="button"></button>
         </fieldset>
         <fieldset class="form__impression">
           <legend class="form__legend">Общее впечатление:</legend>
@@ -66,28 +66,17 @@
           <label for="bridge">Мост Дьявола</label>
           <input id="mountain" type="checkbox">
           <label for="mountain">Гора-Колокол</label>
-          <input id="slide=park" type="checkbox">
-          <label for="slide=park">Слайд-парк</label>
+          <input id="slide-park" type="checkbox">
+          <label for="slide-park">Слайд-парк</label>
           <input id="red-rocks" type="checkbox">
           <label for="red-rocks">Красные скалы</label>
         </fieldset>
         <fieldset class="form__review">
           <legend class="form__legend">Опишите свои эмоции:</legend>
-          <textarea class="form__review-text" placeholder="Опишите подробно все свои восторги"></textarea>
+          <textarea class="form__review-text" placeholder="Опишите подробно все свои восторги" aria-label="Введите свой отзыв"></textarea>
         </fieldset>
-        <button class="button">Отправить отзыв</button>
+        <button class="button" type="submit">Отправить отзыв</button>
       </form>
-      <section class="popup-error">
-        <h2 class="popup-error__title">Что-то пошло не так!</h2>
-        <p class="popup-error__text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="button">Ок</button>
-      </section>
-      <section class="popup-success">
-        <h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
-        <p class="popup-success__text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы
-          опубликуем его на сайте</p>
-        <button class="button">Закрыть окно</button>
-      </section>
     </main>
     <footer class="page-footer container">
       <p class="page-footer__contacts contacts">#visitsedona</p>
@@ -120,5 +109,18 @@
           <img src="img/logo-htmlacademy.svg" alt="Переход на сайт Академии" class="academy-logo"></a>
       </div>
     </footer>
+    <div class="container">
+      <section class="popup-error">
+        <h2 class="popup-error__title">Что-то пошло не так!</h2>
+        <p class="popup-error__text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="button" type="button">Ок</button>
+      </section>
+      <section class="popup-success">
+        <h2 class="popup-success__title">Ваш отзыв отправлен!</h2>
+        <p class="popup-success__text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы
+          опубликуем его на сайте</p>
+        <button class="button" type="button">Закрыть окно</button>
+      </section>
+    </div>
   </body>
 </html>
