@@ -1,14 +1,85 @@
+.proposition {
+  @media (max-width: $mobile-width) {
+    padding-top: 33px;
+    padding-bottom: 49px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 66px;
+  }
+}
+
 .proposition__title {
+  margin-top: 0;
+
   font-weight: bold;
   font-size: 21px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .proposition__text {
+  margin-top: 0;
+
   line-height: 24px;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 30px;
+  }
+
+  //Без <br> не знаю как строки поставить как в макете, паддинги ниже - из макета
+
+  @media (min-width: $tablet-width) {
+    padding-right: 168px;
+    padding-left: 167px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 358px;
+    padding-left: 357px;
+  }
 }
 
 .proposition__form-wrapper {
-  text-align: center;
+  @media (max-width: $mobile-width) {
+    max-width: 280px;
+    max-height: 58px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 458px;
+    max-height: 58px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.proposition__form-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-family: inherit;
+  color: $white;
+
+  background-color: $light-blue;
+
+  @media (max-width: $mobile-width) {
+    width: 280px;
+    height: 58px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+    height: 58px;
+  }
 }

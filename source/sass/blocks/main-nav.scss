@@ -1,8 +1,19 @@
+/*.main-nav { подумать нужно ли!!!
+  position: relative;
+  width: auto;
+  min-height: 51px;
+}*/
+
 .main-nav__list {
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
+
   background-color: $light-blue;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -33,8 +44,27 @@
 }
 
 .main-nav__toggle {
+  @media (max-width: $mobile-width) {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+
+    background-color: $white;
+    border: none;
+
+    cursor: pointer;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.site-list__item {
+  @media (max-width: $mobile-width) {
+    border-top: 1px solid $dark-blue;
+    border-bottom: 1px solid $light-blue;
   }
 }
 
