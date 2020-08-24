@@ -3,7 +3,7 @@
 
   display: flex;
   min-height: 389px;
-  min-width: 320px;
+  min-width: $block-width-mobile;
 
   background-image: url("../img/bg-back-mobile@1x.jpg"), linear-gradient(to right bottom, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
   background-size: cover;
@@ -23,7 +23,7 @@
   position: absolute;
   top: 364px;
   display: block;
-  min-width: 320px;
+  min-width: $block-width-mobile;
   height: 57px;
   content: "";
   background-image: url("../img/bg-intro-triangle-mobile.svg");
@@ -31,7 +31,7 @@
 
   @media (min-width: $tablet-width) {
     top: 462px;
-    min-width: 768px;
+    min-width: $tablet-max-width;
     background-image: url("../img/bg-intro-triangle-tablet.svg");
   }
 

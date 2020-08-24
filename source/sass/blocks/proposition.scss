@@ -58,7 +58,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    max-width: 458px;
+    max-width: $form-width;
     max-height: 58px;
     margin-right: auto;
     margin-left: auto;
@@ -79,7 +79,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 458px;
+    width: $form-width;
     height: 58px;
   }
 }
