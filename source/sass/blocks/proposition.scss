@@ -15,37 +15,44 @@
 }
 
 .proposition__title {
-  margin-top: 0;
-
   font-weight: bold;
   font-size: 21px;
   text-align: center;
 
+  @media (max-width: $mobile-width) {
+    margin-bottom: 34px;
+  }
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 28px;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
   }
 }
 
 .proposition__text {
-  margin-top: 0;
-
   line-height: 24px;
   text-align: center;
 
   @media (max-width: $mobile-width) {
-    padding: 0 30px;
+    margin-bottom: 27px;
+    padding: 0 29px;
   }
 
-  //Без <br> не знаю как строки поставить как в макете, паддинги ниже - из макета
-
   @media (min-width: $tablet-width) {
-    padding-right: 168px;
-    padding-left: 167px;
+    margin-bottom: 37px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 358px;
-    padding-left: 357px;
+    margin-bottom: 42px;
+  }
+}
+
+.proposition__text br {
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 

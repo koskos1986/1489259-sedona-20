@@ -28,6 +28,21 @@ img {
   height: auto;
 }
 
+.page {
+  height: 100%;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.page-body {
+  min-height: 100%;
+  margin: 0;
+}
+
 .site-list {
   padding: 0;
   margin: 0;
@@ -68,4 +83,9 @@ img {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
 }
