@@ -1,0 +1,52 @@
+.popup-error {
+  padding-top: 40px;
+  padding-right: 42px;
+  padding-bottom: 35px;
+  padding-left: 41px;
+
+  //тень не работает
+  //box-shadow: 10px 5px 0px $grey;
+}
+
+.popup-error__title {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.popup-error__text {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.popup-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+}
+
+.popup-success {
+  box-shadow: 10px 5px 0 $grey;
+}
+
+.popup-success__wrapper {
+  padding-top: 38px;
+  padding-right: 39px;
+  padding-bottom: 29px;
+  padding-left: 37px;
+}
+
+.popup-success__title {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.popup-success__text {
+  text-align: center;
+}
+
+.popup__button-wrapper {
+  padding-top: 20px;
+
+  background-color: $grey;
+}

@@ -1,0 +1,40 @@
+.feedback__title {
+  margin-top: 36px;
+  margin-bottom: 42px;
+
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 64px;
+
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 114px;
+  }
+}
+
+.feedback__text {
+  padding-right: 6px;
+  padding-left: 8px;
+  margin-bottom: 16px;
+
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 160px;
+    margin-bottom: 40px;
+    margin-left: 158px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 378px;
+    margin-bottom: 47px;
+    margin-left: 372px;
+  }
+}

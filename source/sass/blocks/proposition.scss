@@ -73,18 +73,6 @@
 }
 
 .proposition__form-button {
-  font-size: 21px;
-  line-height: 26px;
-  font-family: inherit;
-  color: $white;
-
-  background-color: $light-blue;
-
-  @media (max-width: $mobile-width) {
-    width: 280px;
-    height: 58px;
-  }
-
   @media (min-width: $tablet-width) {
     width: $form-width;
     height: 58px;
