@@ -1,0 +1,81 @@
+/*.main-nav { подумать нужно ли!!!
+  position: relative;
+  width: auto;
+  min-height: 51px;
+}*/
+
+.main-nav__list {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 40px;
+
+  background-color: $light-blue;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 153px 1fr 1fr 153px;
+    grid-template-rows: auto;
+    align-content: center;
+    margin-left: 34px;
+    margin-right: 34px;
+    background-color: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 227px 1fr 1fr 227px;
+    grid-template-rows: auto;
+    align-content: center;
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+}
+
+.main-nav__list a {
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    color: $black;
+  }
+}
+
+.main-nav__toggle {
+  @media (max-width: $mobile-width) {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+
+    background-color: $white;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.site-list__item {
+  @media (max-width: $mobile-width) {
+    border-top: 1px solid $dark-blue;
+    border-bottom: 1px solid $light-blue;
+  }
+}
+
+.site-list__item:nth-child(4n+3) {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+}
+
+.site-list__item:nth-child(4n+4) {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
+}

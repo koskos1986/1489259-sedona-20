@@ -1,14 +1,92 @@
+.proposition {
+  @media (max-width: $mobile-width) {
+    padding-top: 33px;
+    padding-bottom: 49px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 66px;
+  }
+}
+
 .proposition__title {
   font-weight: bold;
   font-size: 21px;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
+  }
 }
 
 .proposition__text {
   line-height: 24px;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 27px;
+    padding: 0 29px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
+}
+
+.proposition__text br {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .proposition__form-wrapper {
-  text-align: center;
+  @media (max-width: $mobile-width) {
+    max-width: 280px;
+    max-height: 58px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: $form-width;
+    max-height: 58px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.proposition__form-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-family: inherit;
+  color: $white;
+
+  background-color: $light-blue;
+
+  @media (max-width: $mobile-width) {
+    width: 280px;
+    height: 58px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: $form-width;
+    height: 58px;
+  }
 }
