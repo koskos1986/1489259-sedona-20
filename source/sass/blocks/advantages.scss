@@ -361,6 +361,8 @@
   background-color: $grey-background;
 
   @media (max-width: $mobile-width) {
+    position: relative;
+
     padding-top: 26px;
     padding-right: 26px;
     padding-bottom: 24px;
@@ -381,6 +383,22 @@
     padding-bottom: 62px;
     padding-left: 42px;
     width: $max-width-desktop;
+  }
+}
+
+.advantages__list-item:not(:last-of-type)::after {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 280px;
+    height: 1px;
+
+    background-color: $grey-line;
+
+    content: "";
   }
 }
 

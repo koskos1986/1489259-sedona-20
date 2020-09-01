@@ -25,6 +25,10 @@
   line-height: 24px;
   text-align: center;
 
+  @media (max-width: $mobile-width) {
+    padding-bottom: 20px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-right: 165px;
     margin-bottom: 65px;
@@ -137,8 +141,7 @@
 
     color: $white;
 
-    background-color: $black;
-    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 

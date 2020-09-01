@@ -1,12 +1,14 @@
 .page-header {
   position: relative;
 
-  min-width: 56px;
+  @media (max-width: $mobile-width) {
+    padding-bottom: 56px;
+  }
 }
 
-.page-header-logo {
+.page-header__logo {
   position: absolute;
-  top: 168px;
+  top: 0;
   left: calc((100% - #{$logo-width-mobile}) / 2);
   z-index: 1;
 

@@ -1,180 +1,212 @@
-/*.main-nav { подумать нужно ли!!!
+.main-nav {
   position: relative;
   width: auto;
-  min-height: 51px;
-}*/
-
-.main-nav__list {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
-
-  background-color: $light-blue;
-
-  @media (max-width: $mobile-width) {
-    text-align: center;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 153px 1fr 1fr 153px;
-    grid-template-rows: auto;
-    align-content: center;
-    margin-left: 34px;
-    margin-right: 34px;
-    background-color: $white;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 227px 1fr 1fr 227px;
-    grid-template-rows: auto;
-    align-content: center;
-    margin-left: 72px;
-    margin-right: 72px;
-  }
-}
-
-.main-nav__list a {
-  color: $white;
-
-  @media (min-width: $tablet-width) {
-    color: $black;
-  }
-}
-
-.main-nav__toggle-wrapper {
-  @media (max-width: $mobile-width) {
-    position: relative;
-
-    height: 56px;
-  }
 }
 
 .main-nav__toggle {
-  @media (max-width: $mobile-width) {
-    position: absolute;
-    top: 17px;
-    right: 20px;
-
-
-    display: block;
-    width: 23px;
-    height: 22px;
-    margin-left: auto;
-
-    background-color: $white;
-    border: none;
-
-    cursor: pointer;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
+  display: block;
+  position: absolute;
+  border: none;
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+  outline: none;
 }
 
-.main-nav__toggle--close {
-  span {
-    position: absolute;
-    top: calc(50% - 2px);
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    font-size: 0;
-
-    background-color: $light-blue;
-  }
+.main-nav--close .main-nav__toggle {
+  position: absolute;
+  top: 18px;
+  right: 14px;
 
   &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-
-    width: 100%;
+    width: 23px;
     height: 4px;
-
     background-color: $light-blue;
-
-    content: "";
+    box-shadow: 0 8px 0 0 $light-blue, 0 16px 0 0 $light-blue;
   }
 
-  &::after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+  &:hover::before,
+  &:focus::before {
+    background-color: rgba($light-blue, 0.6%);
+    box-shadow: 0 8px 0 0 rgba($light-blue, 0.6%), 0 16px 0 0 rgba($light-blue, 0.6%);
+  }
 
-    width: 100%;
-    height: 4px;
-
-    background-color: $light-blue;
-
-    content: "";
+  &:active::before {
+    background-color: rgba($light-blue, 0.3%);
+    box-shadow: 0 8px 0 0 rgba($light-blue, 0.3%), 0 16px 0 0 rgba($light-blue, 0.3%);
   }
 }
 
-.main-nav__toggle--open {
-  span {
-    opacity: 0;
+.main-nav--open .main-nav__toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 0;
+    transform: rotate(45deg);
+    width: 23px;
+    height: 4px;
+    background-color: $white;
+    box-shadow: none;
   }
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background-color: $white;
-
-    content: "";
+  &::after {
     transform: rotate(-45deg);
   }
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 0;
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: rgba($white, 0.6%);
+  }
 
-    width: 100%;
-    height: 4px;
-
-    background-color: $white;
-
-    content: "";
-    transform: rotate(45deg);
+  &:active::before,
+  &:active::after {
+    background-color: rgba($white, 0.3%);
+    outline: none;
   }
 }
 
-.main-nav__list-wrapper {
+.main-nav--open {
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.main-nav__link {
   @media (max-width: $mobile-width) {
+    display: block;
+    height: 100%;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: $white;
+    text-align: center;
+
+    background-color: $light-blue;
+    border-top: 1px solid rgba($white, 0.2%);
+    border-bottom: 1px solid rgba(#010101, 0.2%);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-nav--close .main-nav__item {
     display: none;
   }
-}
 
-.main-nav__list--open {
-  .main-nav__list-wrapper {
-    display: block;
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--open::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
+
+  .main-nav__link {
+    &[href]:hover,
+    &[href]:focus {
+      background-color: $blue;
+    }
+
+    &:active {
+      color: rgba(#ffffff, 0.3%);
+      background-color: $dark-blue;
+    }
   }
 }
 
-.site-list__item {
-  @media (max-width: $mobile-width) {
-    border-top: 1px solid $dark-blue;
-    border-bottom: 1px solid $light-blue;
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 153px 1fr 1fr 153px;
+      grid-template-rows: auto;
+      align-content: center;
+      margin-left: 34px;
+      margin-right: 34px;
+
+      background-color: $white;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 227px 1fr 1fr 227px;
+      grid-template-rows: auto;
+      align-content: center;
+      margin-left: 72px;
+      margin-right: 72px;
+    }
+  }
+
+  .main-nav__link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    font-size: 14px;
+    color: $black;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $light-blue;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: rgba(#000000, 0.3%);
+      background-color: transparent;
+    }
+
+    &--active {
+      color: $grey-special;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        color: $grey-active;
+        background-color: transparent;
+      }
+
+      &:active {
+        color: rgba(#766357, 0.3%);
+        background-color: transparent;
+      }
+    }
   }
 }
 
-.site-list__item:nth-child(4n+3) {
+.main-nav__item:nth-child(4n+3) {
   @media (min-width: $tablet-width) {
     text-align: right;
   }
 }
 
-.site-list__item:nth-child(4n+4) {
+.main-nav__item:nth-child(4n+4) {
   @media (min-width: $tablet-width) {
     text-align: right;
   }

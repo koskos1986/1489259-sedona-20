@@ -7,25 +7,25 @@
   </head>
   <body class="page-body">
     <header class="page-header container">
-      <a class="page-header-logo">
+      <a href="index.html" class="page-header__logo" aria-label="Переход на главную">
         <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav__toggle--close main-nav--nojs">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="photo.html">Фото и видео</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Форма отзыва</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
           </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">HTML Academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle toggle-js main-nav__toggle--close" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </nav>
@@ -136,5 +136,6 @@
         <img src="img/logo-htmlacademy.svg" alt="Переход на сайт Академии" class="academy-logo"></a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
