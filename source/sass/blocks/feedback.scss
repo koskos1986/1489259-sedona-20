@@ -10,7 +10,7 @@
     margin-top: 64px;
 
     font-size: 30px;
-    line-height: 26px;
+    line-height: 36px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,13 +28,365 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 160px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-left: 158px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 378px;
-    margin-bottom: 47px;
     margin-left: 372px;
+  }
+}
+
+.feedback-form {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 17px 40px 35px 40px;
+
+    & div:nth-child(3) {
+      flex-basis: 50%;
+      order: -1;
+
+      @media (min-width: $tablet-width) {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 292px;
+          background-color: #dbdbdb;
+        }
+      }
+    }
+
+    & div:nth-child(1) {
+      flex-basis: 50%;
+      margin-bottom: 26px;
+    }
+
+    & div:nth-child(2) {
+      margin-bottom: 11px;
+    }
+
+    & div:nth-child(4) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+  }
+}
+
+.feedback-form__wrapper {
+  position: relative;
+
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  width: 100%;
+
+  @media (max-width: $mobile-width) {
+    border-top: $block-border;
+  }
+}
+
+.feedback-form__list--contact {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.feedback-form__list--places {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.feedback-form__fieldset {
+  border: none;
+}
+
+.feedback-form__legend {
+  margin-right: auto;
+  margin-bottom: 19px;
+  margin-left: auto;
+
+  font-weight: bold;
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.feedback-form__legend--attractions {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 68px;
+  }
+}
+
+.feedback-form__legend--contact {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.feedback-form__legend--places {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
+}
+
+.feedback-form__item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  &--meeting:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &--meeting input {
+    margin-left: 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--meeting label {
+      padding-left: 38px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--meeting label {
+      padding-left: 59px;
+    }
+  }
+}
+
+.feedback-form__item--contact {
+  flex-direction: column;
+  align-items: flex-start;
+
+  & label {
+    margin-bottom: 8px;
+    margin-left: 20px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-basis: 50%;
+    align-items: center;
+
+    & label {
+      margin: 0 17px 0 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.feedback-form__item--checkbox {
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 35%;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: 25%;
+  }
+}
+
+.feedback-form__input {
+  width: 100%;
+  height: 58px;
+  padding-top: 18px;
+  padding-right: 22px;
+  padding-bottom: 14px;
+  padding-left: 22px;
+
+  font-family: inherit;
+
+  border: 4px solid transparent;
+  background-color: $grey;
+
+  overflow: hidden;
+
+  &::placeholder {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: $grey-hover;
+  }
+
+  &:active {
+    background-color: $white;
+    border-color: $grey-hover;
+  }
+
+  &:focus {
+    background-color: $white;
+    border-color: $grey-hover;
+  }
+}
+
+.feedback-form__input--contact {
+  @media (min-width: $desktop-width) {
+    width: 257px;
+  }
+}
+
+.feedback-form__label-checkbox {
+  position: relative;
+
+  display: block;
+  padding-left: 79px;
+
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: none;
+}
+
+.feedback-form__input-checkbox + label::before {
+  position: absolute;
+  left: 0;
+  top: -9px;
+
+  width: 48px;
+  height: 48px;
+
+  background-color: $grey;
+
+  content: "";
+}
+
+.feedback-form__input-checkbox--round + label::before {
+  border-radius: 50%;
+}
+
+.feedback-form__input-checkbox:checked + label::after {
+  position: absolute;
+  left: 13px;
+  top: 7px;
+
+  width: 23px;
+  height: 16px;
+
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.feedback-form__input-checkbox--round:checked + label::after {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+  background-color: $black;
+
+  content: "";
+}
+
+.feedback-form__icon {
+  position: absolute;
+  top: 34px;
+  right: 0;
+
+  width: 58px;
+  height: 58px;
+  padding-top: 20px;
+  padding-right: 19px;
+  padding-bottom: 20px;
+  padding-left: 21px;
+
+  background-color: $grey-icon;
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+    right: 80px;
+  }
+}
+
+.feedback-form__icon--email {
+  @media (min-width: $desktop-width) {
+    right: 2px;
+  }
+}
+
+.feedback-form__review-text {
+  width: 100%;
+  height: 160px;
+  padding: 13px 20px;
+  margin-bottom: 51px;
+
+  font-family: inherit;
+
+  border: none;
+
+  background-color: $grey;
+
+  &::placeholder {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+.feedback-form__review-button {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    height: 58px;
+  }
+}
+
+.feedback-form__note {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
   }
 }

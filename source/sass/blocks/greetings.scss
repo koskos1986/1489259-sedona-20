@@ -21,7 +21,7 @@
 
 .greetings::after {
   position: absolute;
-  top: 364px;
+  bottom: 0;
 
   display: block;
   min-width: $block-width-mobile;
@@ -32,8 +32,6 @@
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
-    top: 462px;
-
     min-width: $tablet-max-width;
 
     background-image: url("../img/bg-intro-triangle-tablet.svg");
@@ -75,15 +73,7 @@
 
 .greetings-short::after {
   position: absolute;
-  top: 132px;
-
-  @media (min-width: $tablet-width) {
-    top: 176px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 244px;
-  }
+  bottom: 0;
 }
 
 .greetings-short__title {

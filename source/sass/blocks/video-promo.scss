@@ -6,6 +6,11 @@
     margin-left: 60px;
     margin-right: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }
 
 .video-promo__title {
@@ -35,7 +40,8 @@
 
 .video-promo__picture {
   position: relative;
-  min-width: 320px;
+  max-width: 320px;
+  width: 100%;
   height: 201px;
   margin-bottom: 102px;
 
@@ -44,14 +50,13 @@
 
   @media (min-width: $tablet-width) {
     height: 500px;
-    min-width: 648px;
+    max-width: 648px;
 
     background-image: url("../img/video-tablet@1x.jpg");
   }
 
   @media (min-width: $desktop-width) {
-    height: 500px;
-    min-width: 800px;
+    max-width: 800px;
     margin-bottom: 40px;
 
     background-image: url("../img/video-desktop@1x.jpg");
