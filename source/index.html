@@ -4,28 +4,54 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Pixel Glass -->
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url("../img_PP/Mobile.png");
+      }
+      /* Планшет */
+      @media (min-width: 768px) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("../img/Tablet.png");
+        }
+      }
+      /* Десктоп */
+      @media ( min-width: 1200px ) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url( "../img_PP/Desktop.png" );
+        }
+      }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body class="page-body">
     <header class="page-header container">
-      <a class="page-header-logo">
+      <a class="page-header__logo" aria-label="Переход на главную">
         <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav__toggle--close main-nav--close main-nav--nojs">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="photo.html">Фото и видео</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Форма отзыва</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
           </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">HTML Academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle main-nav__toggle--close" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </nav>
@@ -95,7 +121,7 @@
         <h2 class="proposition__title title">Заинтересовались?</h2>
         <p class="proposition__text text">Укажите предполагаемые даты поездки,<br> И мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <div class="proposition__form-wrapper">
-          <button class="proposition__form-button button">Найти гостиницу</button>
+          <button class="proposition__form-button form-button button">Найти гостиницу</button>
         </div>
       </section>
       <section class="map">
@@ -136,5 +162,6 @@
         <img src="img/logo-htmlacademy.svg" alt="Переход на сайт Академии" class="academy-logo"></a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

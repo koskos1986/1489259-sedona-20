@@ -3,7 +3,7 @@
   margin-bottom: 40px;
 
   font-weight: bold;
-  font-size: 21px;
+  font-size: 18px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -24,6 +24,10 @@
 
   line-height: 24px;
   text-align: center;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 20px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-right: 165px;
@@ -65,7 +69,7 @@
   line-height: 24px;
 
   @media (max-width: $mobile-width) {
-    border-top: 1px solid $grey-hover;
+    border-top: $block-border;
   }
 
   @media (min-width: $desktop-width) {
@@ -91,7 +95,7 @@
 
 .review__item:last-child {
   @media (max-width: $mobile-width) {
-    border-bottom: 1px solid $grey-hover;
+    border-bottom: $block-border;
   }
 }
 
@@ -137,8 +141,7 @@
 
     color: $white;
 
-    background-color: $black;
-    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 

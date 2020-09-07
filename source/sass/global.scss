@@ -57,6 +57,20 @@ img {
   outline: none;
 }
 
+.form-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-family: inherit;
+  color: $white;
+
+  background-color: $light-blue;
+
+  @media (max-width: $mobile-width) {
+    width: 280px;
+    height: 58px;
+  }
+}
+
 .input {
   border: 0;
   outline: none;
@@ -88,4 +102,10 @@ img {
 .text {
   margin: 0;
   padding: 0;
+}
+
+.hidden {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
