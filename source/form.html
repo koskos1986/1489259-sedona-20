@@ -16,7 +16,7 @@
       @media (min-width: 768px) {
         HTML {
           /* Планшетный макет */
-          background-image: url("../img/TabletForm.png");
+          background-image: url("../img_PP/TabletForm.png");
         }
       }
       /* Десктоп */
@@ -34,7 +34,11 @@
   <body class="page-body">
     <header class="page-header container">
       <a href="index.html" class="page-header__logo" aria-label="Переход на главную">
-        <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+        </picture>
       </a>
       <nav class="main-nav main-nav__toggle--close main-nav--close main-nav--nojs">
         <ul class="main-nav__list site-list">
@@ -203,7 +207,7 @@
           <p class="popup-success__text text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
         </div>
           <div class="popup__button-wrapper">
-          <button class="form-button button success-button" type="button">Закрыть окно</button>
+          <button class="form-button button popup-button" type="button">Закрыть окно</button>
         </div>
       </section>
       <script src="js/script.js"></script>

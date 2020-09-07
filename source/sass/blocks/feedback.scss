@@ -57,7 +57,7 @@
           transform: translateY(-50%);
           width: 1px;
           height: 292px;
-          background-color: #dbdbdb;
+          background-color: $grey-line;
         }
       }
     }
@@ -211,7 +211,9 @@
     align-items: center;
 
     & label {
-      margin: 0 17px 0 0;
+      margin-right: 17px;
+      margin-bottom: 0;
+      margin-left: 0;
     }
 
     &:not(:last-child) {
