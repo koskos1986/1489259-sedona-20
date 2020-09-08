@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Форма отзыва</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Pixel Glass -->
@@ -32,6 +33,23 @@
     <!-- // Pixel Glass -->
   </head>
   <body class="page-body">
+    <svg style="display: none;">
+      <symbol viewBox="0 0 18 15" id="icon-twitter">
+        <path d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" fill="white"/>
+      </symbol>
+      <symbol viewBox="0 0 9 19" id="icon-facebook">
+        <path d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6H2C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z" fill="white"/>
+      </symbol>
+      <symbol viewBox="0 0 20 14" id="icon-youtube">
+        <path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" fill="white"/>
+      </symbol>
+      <symbol viewBox="0 0 18 18" id="icon-phone">
+        <path d="M3.6 7.8C5 10.6 7.4 12.9 10.2 14.4L12.4 12.2C12.7 11.9 13.1 11.8 13.4 12C14.5 12.4 15.7 12.6 17 12.6C17.6 12.6 18 13 18 13.6V17C18 17.6 17.6 18 17 18C7.6 18 0 10.4 0 1C0 0.4 0.4 0 1 0H4.5C5.1 0 5.5 0.4 5.5 1C5.5 2.2 5.7 3.4 6.1 4.6C6.2 4.9 6.1 5.3 5.9 5.6L3.6 7.8Z" fill="#010101"/>
+      </symbol>
+      <symbol viewBox="0 0 16 12" id="icon-email">
+        <path d="M8 8C7.7 8 7.5 7.9 7 7.7L0 4V11C0 11.5 0.5 12 1 12H15C15.5 12 16 11.5 16 11V4L9 7.7C8.5 7.9 8.3 8 8 8ZM15 0H1C0.5 0 0 0.5 0 1V1.8L8 6L16 1.8V1C16 0.5 15.5 0 15 0Z" fill="black"/>
+      </symbol>
+    </svg>
     <header class="page-header container">
       <a href="index.html" class="page-header__logo" aria-label="Переход на главную">
         <picture>
@@ -40,7 +58,7 @@
           <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
         </picture>
       </a>
-      <nav class="main-nav main-nav__toggle--close main-nav--close main-nav--nojs">
+      <nav class="main-nav main-nav--close main-nav--nojs">
         <ul class="main-nav__list site-list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -88,25 +106,25 @@
             </fieldset>
           </div>
           <div class="feedback-form__wrapper">
-            <fieldset class="feedback-form__fieldset text">
+            <fieldset class="feedback-form__fieldset feedback-form__fieldset--contact text">
               <legend class="feedback-form__legend feedback-form__legend--contact">Контактная информация:</legend>
               <ul class="feedback-form__list site-list feedback-form__list--contact">
                 <li class="feedback-form__item feedback-form__item--contact">
                   <label class="feedback-form__label" for="phone"><span class="hidden">Контактный</span> телефон*:</label>
                   <input class="feedback-form__input feedback-form__input--contact" id="phone" type="text" placeholder="Введите телефон" required>
                   <span class="feedback-form__icon">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M3.6 7.8C5 10.6 7.4 12.9 10.2 14.4L12.4 12.2C12.7 11.9 13.1 11.8 13.4 12C14.5 12.4 15.7 12.6 17 12.6C17.6 12.6 18 13 18 13.6V17C18 17.6 17.6 18 17 18C7.6 18 0 10.4 0 1C0 0.4 0.4 0 1 0H4.5C5.1 0 5.5 0.4 5.5 1C5.5 2.2 5.7 3.4 6.1 4.6C6.2 4.9 6.1 5.3 5.9 5.6L3.6 7.8Z" fill="#010101"/>
-                      </svg>
+                    <svg width="18" height="18">
+                      <use xlink:href="#icon-phone"></use>
+                    </svg>
                   </span>
                 </li>
                 <li class="feedback-form__item feedback-form__item--contact">
                   <label class="feedback-form__label" for="email">Электронная почта*:</label>
                   <input class="feedback-form__input feedback-form__input--contact" id="email" type="text" placeholder="Введите e-mail" required>
                   <span class="feedback-form__icon feedback-form__icon--email">
-                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 8C7.7 8 7.5 7.9 7 7.7L0 4V11C0 11.5 0.5 12 1 12H15C15.5 12 16 11.5 16 11V4L9 7.7C8.5 7.9 8.3 8 8 8ZM15 0H1C0.5 0 0 0.5 0 1V1.8L8 6L16 1.8V1C16 0.5 15.5 0 15 0Z" fill="black"/>
-                      </svg>
+                    <svg width="16" height="12">
+                      <use xlink:href="#icon-email"></use>
+                    </svg>
                   </span>
                 </li>
               </ul>
@@ -132,8 +150,8 @@
             </fieldset>
           </div>
           <div class="feedback-form__wrapper">
-            <fieldset class="feedback-form__fieldset text">
-              <legend class="feedback-form__legend feedback-form__legend--places">Посещенные достопримечательности:</legend>
+            <fieldset class="feedback-form__fieldset feedback-form__fieldset--places text">
+              <legend class="feedback-form__legend feedback-form__legend--places">Посещенные <br> достопримечательности:</legend>
               <ul class="feedback-form__list feedback-form__list--places site-list">
                 <li class="feedback-form__item feedback-form__item--checkbox">
                   <input class="feedback-form__input-checkbox visually-hidden" id="bridge" type="checkbox" checked>
@@ -155,8 +173,8 @@
             </fieldset>
           </div>
           <div class="feedback-form__wrapper">
-            <fieldset class="feedback-form__fieldset text">
-              <legend class="feedback-form__legend">Опишите свои эмоции:</legend>
+            <fieldset class="feedback-form__fieldset feedback-form__fieldset--review text">
+              <legend class="feedback-form__legend feedback-form__legend--review">Опишите свои эмоции:</legend>
               <textarea class="feedback-form__review-text" placeholder="Опишите подробно все свои восторги" aria-label="Введите свой отзыв"></textarea>
             </fieldset>
             <button class="feedback-form__review-button form-button button" type="submit">Отправить отзыв</button>
@@ -170,22 +188,22 @@
       <ul class="page-footer__social social site-list">
         <li class="social__item">
           <a href="#" class="social__link" aria-label="Переход на Twiiter">
-            <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" fill="white"/>
+            <svg width="18" height="15">
+              <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a href="#" class="social__link" aria-label="Переход на Facebook">
-            <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6H2C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z" fill="white"/>
+            <svg width="9" height="19">
+              <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a href="#" class="social__link" aria-label="Переход на Youtube">
-            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" fill="white"/>
+            <svg width="20" height="14">
+              <use xlink:href="#icon-youtube"></use>
             </svg>
           </a>
         </li>
@@ -196,18 +214,18 @@
           <img src="img/logo-htmlacademy.svg" alt="Переход на сайт Академии" class="academy-logo"></a>
       </div>
     </footer>
-      <section class="popup popup-error">
-        <h2 class="popup-error__title title">Что-то пошло не так!</h2>
-        <p class="popup-error__text text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="form-button button popup-button" type="button">Ок</button>
+      <section class="popup popup--error">
+        <h2 class="popup__title title">Что-то пошло <br>не так!</h2>
+        <p class="popup__text text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="popup__button form-button button" type="button">Ок</button>
       </section>
-      <section class="popup popup-success">
-        <div class="popup-success__wrapper">
-          <h2 class="popup-success__title title">Ваш отзыв отправлен!</h2>
-          <p class="popup-success__text text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте</p>
+      <section class="popup popup--success">
+        <div class="popup__wrapper">
+          <h2 class="popup__title title">Ваш отзыв отправлен!</h2>
+          <p class="popup__text text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте</p>
         </div>
           <div class="popup__button-wrapper">
-          <button class="form-button button popup-button" type="button">Закрыть окно</button>
+          <button class="popup__button form-button button popup__button--success" type="button">Закрыть окно</button>
         </div>
       </section>
       <script src="js/script.js"></script>
