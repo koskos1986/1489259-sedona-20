@@ -125,6 +125,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     min-height: 80px;
 
     padding-top: 22px;
@@ -169,34 +170,35 @@
   }
 }
 
-.review__like-number {
-  position: relative;
+.review__button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 34px;
+.review__button {
+  background-color: transparent;
+  padding: 0;
+}
+
+.review__icon-like {
+  fill: $black;
+  opacity: 0.3;
+
+  @media (min-width: $desktop-width) {
+    fill: $white;
+    opacity: 1;
+  }
+}
+
+.review__like-number {
+  margin-left: 14px;
 
   font-weight: bold;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
     align-self: center;
-    margin-top: -5px;
-    margin-left: auto;
+    margin-left: 9px;
   }
-}
-
-.review__like-number::before {
-  position: absolute;
-  left: -34px;
-
-  display: block;
-  width: 23px;
-  height: 21px;
-
-  content: "";
-  background-image: url("../img/icon-like.svg");
-  background-repeat: no-repeat;
-
-  opacity: 0.3;
 }

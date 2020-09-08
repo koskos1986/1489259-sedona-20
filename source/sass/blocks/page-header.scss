@@ -17,10 +17,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    //left: calc((100% - #{$logo-width-desktop}) / 2);
+    left: calc((100% - #{$logo-width-desktop}) / 2);
   }
 }
 
 .page-header__logo img {
   vertical-align: middle;
+
+  @media (min-width: $desktop-width) {
+    width: 187px;
+    height: 96px;
+  }
 }

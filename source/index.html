@@ -16,7 +16,7 @@
       @media (min-width: 768px) {
         HTML {
           /* Планшетный макет */
-          background-image: url("../img/Tablet.png");
+          background-image: url("../img__PP/Tablet.png");
         }
       }
       /* Десктоп */
@@ -34,7 +34,11 @@
   <body class="page-body">
     <header class="page-header container">
       <a class="page-header__logo" aria-label="Переход на главную">
-        <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+        </picture>
       </a>
       <nav class="main-nav main-nav__toggle--close main-nav--close main-nav--nojs">
         <ul class="main-nav__list site-list">
@@ -75,7 +79,11 @@
               <p class="advantages__list-special-number">-№1-</p>
               <p class="advantages__list-special-text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Вид отеля в городке">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg" width="320" height="260" alt="Вид отеля в городке">
+            </picture>
             <ul class="advantages__list-features site-list">
               <li class="advantages__list-features-item advantages__list-features-item--house">
                 <span class="advantages__list-features-title title">Жилье</span>
@@ -93,7 +101,11 @@
             </ul>
           </li>
           <li class="advantages__list-special-item">
-            <img src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Вид на мост Дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg" width="320" height="260" alt="Вид на мост Дьявола">
+            </picture>
             <div class="advantages__list-special-wrapper">
               <h3 class="advantages__list-special-title title">Там есть <br>мост дьявола</h3>
               <p class="advantages__list-special-number">-№2-</p>
