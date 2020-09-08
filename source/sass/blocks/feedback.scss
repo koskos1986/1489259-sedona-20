@@ -114,7 +114,17 @@
 }
 
 .feedback-form__fieldset {
+  position: relative;
+
   border: none;
+}
+
+.feedback-form__fieldset--contact,
+.feedback-form__fieldset--places,
+.feedback-form__fieldset--review {
+  @media (min-width: $tablet-width) {
+    border-top: 1px solid $grey-line;
+  }
 }
 
 .feedback-form__legend {
@@ -146,16 +156,37 @@
 .feedback-form__legend--contact {
   @media (min-width: $tablet-width) {
     margin-bottom: 21px;
+    padding-right: 46px;
+    padding-left: 47px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 71px;
+    padding-right: 62px;
+    padding-left: 60px;
   }
 }
 
 .feedback-form__legend--places {
+  text-align: center;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 42px;
+    padding-right: 46px;
+    padding-left: 48px;
+  }
+}
+
+.feedback-form__legend--review {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+    padding-right: 62px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 61px;
+    padding-left: 59px;
   }
 }
 

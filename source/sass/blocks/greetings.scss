@@ -12,7 +12,7 @@
   @media (max-width: $mobile-width) {
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-back-mobile@2x.jpg"), linear-gradient(to right bottom, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
-      background-size: 320px 389px;
+      background-size: $block-width-mobile 389px;
     }
   }
 
@@ -22,7 +22,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg"), linear-gradient(to right bottom, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
-      background-size: 768px auto;
+      background-size: $tablet-max-width auto;
     }
   }
 
@@ -31,7 +31,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-back-mobile@2x.jpg"), linear-gradient(to right bottom, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
-      background-size: 1200px auto;
+      background-size: $desktop-width auto;
     }
   }
 }
