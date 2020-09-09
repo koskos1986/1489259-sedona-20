@@ -7,17 +7,17 @@
   font-size: 21px;
 
   @media (max-width: $mobile-width) {
-    padding-top: 29px;
+    padding-top: 38px;
     justify-content: center;
   }
 
   @media (min-width: $tablet-width) {
     padding-top: 49px;
     padding-bottom: 46px;
-    padding-left: 45px;
+    padding-left: 59px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 104px;
+    padding-left: 120px;
   }
 }
