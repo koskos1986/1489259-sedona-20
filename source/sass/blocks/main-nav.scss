@@ -111,7 +111,9 @@
 }
 
 .main-nav--nojs .main-nav__list {
-  display: block;
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
 }
 
 .main-nav--nojs .main-nav__toggle {

@@ -29,8 +29,18 @@
   margin-left: 12px;
 }
 
-.developer img {
+.developer svg {
   vertical-align: middle;
 
   box-sizing: content-box;
+
+  &:hover,
+  &:focus {
+    fill: $light-blue;
+  }
+
+  &:active {
+    fill: $black;
+    opacity: 0.3;
+  }
 }

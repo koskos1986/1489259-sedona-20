@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <!-- Pixel Glass -->
     <style>
       HTML {
@@ -17,7 +17,7 @@
       @media (min-width: 768px) {
         HTML {
           /* Планшетный макет */
-          background-image: url("../img__PP/Tablet.png");
+          background-image: url("../img_PP/Tablet.png");
         }
       }
       /* Десктоп */
@@ -28,8 +28,8 @@
         }
       }
     </style>
-    <link href="/node_modules/pixel-glass/styles.css" rel="stylesheet">
-    <script src="/node_modules/pixel-glass/script.js"></script>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
     <!-- // Pixel Glass -->
   </head>
   <body class="page-body">
@@ -42,6 +42,9 @@
       </symbol>
       <symbol viewBox="0 0 20 14" id="icon-youtube">
         <path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" fill="white"/>
+      </symbol>
+      <symbol viewBox="0 0 27 35" id="icon-htmlacademy">
+        <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
       </symbol>
     </svg>
     <header class="page-header container">
@@ -87,8 +90,8 @@
         <ol class="advantages__list site-list">
           <li class="advantages__list-special-item">
             <div class="advantages__list-special-wrapper">
-              <h3 class="advantages__list-special-title title">Настоящий <br>городок</h3>
-              <p class="advantages__list-special-number">- №1 -</p>
+              <h3 class="advantages__list-special-title title">Настоящий <br> городок</h3>
+              <p class="advantages__list-special-number">– №1 –</p>
               <p class="advantages__list-special-text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <picture>
@@ -125,24 +128,24 @@
               <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg" width="320" height="260" alt="Вид на мост Дьявола">
             </picture>
             <div class="advantages__list-special-wrapper">
-              <h3 class="advantages__list-special-title title">Там есть <br>мост дьявола</h3>
-              <p class="advantages__list-special-number">- №2 -</p>
+              <h3 class="advantages__list-special-title title">Там есть <br> мост дьявола</h3>
+              <p class="advantages__list-special-number">– №2 –</p>
               <p class="advantages__list-special-text">Да, по нему можно пройти! Если вы осмелитесь конечно</p>
             </div>
           </li>
           <li class="advantages__list-item">
-            <h3 class="advantages__list-title title">Небольшая <br>площадь</h3>
-            <p class="advantages__list-number">- №3 -</p>
+            <h3 class="advantages__list-title title">Небольшая <br> площадь</h3>
+            <p class="advantages__list-number">– №3 –</p>
             <p class="advantages__list-text">все интересные места находятся очень близко</p>
           </li>
           <li class="advantages__list-item">
-            <h3 class="advantages__list-title title">Красивая <br>дорога</h3>
-            <p class="advantages__list-number">- №4 -</p>
+            <h3 class="advantages__list-title title">Красивая <br> дорога</h3>
+            <p class="advantages__list-number">– №4 –</p>
             <p class="advantages__list-text">ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
           <li class="advantages__list-item">
-            <h3 class="advantages__list-title title">Мало <br>туристов</h3>
-            <p class="advantages__list-number">- №5 -</p>
+            <h3 class="advantages__list-title title">Мало <br> туристов</h3>
+            <p class="advantages__list-number">– №5 –</p>
             <p class="advantages__list-text">большинство едет в гранд каньон и толпится там</p>
           </li>
         </ol>
@@ -188,10 +191,13 @@
       </ul>
       <div class="page-footer__developer developer">
         <p class="developer__text">Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="developer__link">
-          <img src="img/logo-htmlacademy.svg" alt="Переход на сайт Академии" class="academy-logo"></a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="developer__link" aria-label="Переход на сайт Академии">
+          <svg width="27" height="34">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
+        </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

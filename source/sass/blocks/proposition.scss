@@ -75,6 +75,10 @@
 }
 
 .proposition__form-button {
+  &:disabled {
+    background-color: $grey-hover;
+  }
+
   @media (min-width: $tablet-width) {
     width: $form-width;
     height: 58px;

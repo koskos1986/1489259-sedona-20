@@ -14,7 +14,6 @@ const jsmin = require("gulp-jsmin");
 const htmlmin = require("gulp-htmlmin");
 const csso = require("gulp-csso");
 
-
 // Styles
 
 const styles = () => {
@@ -25,6 +24,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename({suffix:'.min'}))
     .pipe(sourcemap.write("."))
@@ -46,24 +46,23 @@ const script = () => {
 
 exports.script = script;
 
-
 const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({quality: 80, progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
     ]))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.images = images;
-
 
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
-
 exports.html = html;
 
 // Server
@@ -96,10 +95,18 @@ exports.sprite = sprite;
 const imagewebP = () => {
   return gulp.src('source/img/*.jpg')
     .pipe(webp())
-    .pipe(gulp.dest("build/img/"))
+    .pipe(gulp.dest("build/img/"));
 }
 
 exports.webP = imagewebP;
+
+const imageTask = gulp.series(
+  sprite,
+  images,
+  imagewebP
+)
+
+exports.imageTask = imageTask;
 
 const clean = () => {
   return del("build");
@@ -125,10 +132,8 @@ const build = gulp.series(
   copy,
   styles,
   sprite,
-  images,
-  imagewebP,
   script,
-  html,
+  html
 );
 
 exports. build = build;
@@ -136,18 +141,11 @@ exports. build = build;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles")).on("change", sync.reload);
   gulp.watch("source/js/**/*.js", gulp.series("script"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
 exports.default = gulp.series(
   build, server, watcher
 );
-
-const start = gulp.series(
-  build,
-  server,
-  watcher
-);
-exports.start = start;

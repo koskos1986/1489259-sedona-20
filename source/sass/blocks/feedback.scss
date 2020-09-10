@@ -328,10 +328,22 @@
   background-color: $grey;
 
   content: "";
+
+  &:hover {
+    background-color: $grey-hover;
+  }
+
+  &:active {
+    background-color: $white;
+  }
 }
 
 .feedback-form__input-checkbox--round + label::before {
   border-radius: 50%;
+
+  &:hover {
+    background-color: $grey-hover;
+  }
 }
 
 .feedback-form__input-checkbox:checked + label::after {

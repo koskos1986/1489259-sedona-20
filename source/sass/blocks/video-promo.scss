@@ -110,7 +110,6 @@
   min-width: 280px;
   height: 93px;
   align-items: center;
-  margin-left: 20px;
 
   @media (min-width: $tablet-width) {
     justify-content: center;
@@ -199,16 +198,7 @@
 
 
   @media (min-width: $tablet-width) {
-    background-color: transparent;
-  }
-
-  &:hover path,
-  &:focus path {
-    fill: $black;
-  }
-
-  &:active path {
-    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &--repeat {
@@ -235,8 +225,18 @@
   }
 }
 
-.video-promo__icon path {
+.video-promo__icon {
+  fill: $grey-medium;
+
   @media (min-width: $tablet-width) {
     fill: $white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
