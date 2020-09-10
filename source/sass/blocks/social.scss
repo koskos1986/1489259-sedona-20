@@ -17,6 +17,16 @@
 .social__link {
   display: flex;
   height: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+  }
+
+  &:active {
+    background-color: $dark-blue;
+    opacity: 0.3;
+  }
 }
 
 .social__item svg {

@@ -15,7 +15,7 @@
 
 .video-promo__title {
   margin-top: 32px;
-  margin-bottom: 42px;
+  margin-bottom: 25px;
 
   text-align: center;
 
@@ -27,6 +27,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 63px;
+    margin-bottom: 29px;
   }
 }
 
@@ -197,16 +198,7 @@
 
 
   @media (min-width: $tablet-width) {
-    background-color: transparent;
-  }
-
-  &:hover path,
-  &:focus path {
-    fill: $black;
-  }
-
-  &:active path {
-    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &--repeat {
@@ -233,8 +225,18 @@
   }
 }
 
-.video-promo__icon path {
+.video-promo__icon {
+  fill: $grey-medium;
+
   @media (min-width: $tablet-width) {
     fill: $white;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
