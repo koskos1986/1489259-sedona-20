@@ -20,12 +20,12 @@
 
   &:hover,
   &:focus {
-  background-color: $blue;
-    }
+    background-color: $blue;
+  }
 
   &:active {
-  background-color: $dark-blue;
-  opacity: 0.3;
+    background-color: $dark-blue;
+    opacity: 0.3;
   }
 }
 
