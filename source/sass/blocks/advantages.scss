@@ -128,6 +128,10 @@
   }
 }
 
+.advantages__image {
+  object-fit: cover;
+}
+
 .advantages__list-special-item picture {
   @media (min-width: $tablet-width) {
     height: $block-height;
