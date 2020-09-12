@@ -7,14 +7,15 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-top: 64px;
+    margin-top: 67px;
 
     font-size: 30px;
     line-height: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 114px;
+    margin-top: 107px;
+    margin-bottom: 30px;
   }
 }
 
@@ -28,12 +29,13 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 160px;
-    margin-bottom: 30px;
+    margin-bottom: 44px;
     margin-left: 158px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 378px;
+    margin-bottom: 33px;
     margin-left: 372px;
   }
 }
@@ -42,7 +44,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    padding: 17px 40px 35px 40px;
+    padding: 17px 40px 43px 40px;
 
     & div:nth-child(3) {
       flex-basis: 50%;
@@ -68,28 +70,33 @@
     }
 
     & div:nth-child(2) {
-      margin-bottom: 11px;
+      margin-bottom: 14px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 7px;
     padding-right: 100px;
-    padding-bottom: 60px;
+    padding-bottom: 47px;
     padding-left: 100px;
+
+    & div:nth-child(2) {
+      margin-top: -4px;
+    }
   }
 }
 
 .feedback-form__wrapper {
   position: relative;
 
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
   width: 100%;
 
   @media (max-width: $mobile-width) {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+
     border-top: $block-border;
   }
 }
@@ -106,6 +113,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: -12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
   }
 }
 
@@ -143,17 +155,40 @@
   }
 }
 
+.feedback-form__legend--meeting {
+  @media (min-width: $tablet-width) {
+    margin-left: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 58px;
+  }
+}
+
 .feedback-form__legend--attractions {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 37px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 68px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 78px;
   }
 }
 
 .feedback-form__legend--contact {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 17px;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 21px;
-    padding-right: 46px;
-    padding-left: 47px;
+    padding-right: 61px;
+    padding-left: 61px;
   }
 
   @media (min-width: $desktop-width) {
@@ -164,18 +199,21 @@
 }
 
 .feedback-form__legend--places {
+  padding-left: 11px;
+  padding-right: 21px;
+  margin-bottom: 31px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 42px;
-    padding-right: 46px;
-    padding-left: 48px;
+    margin-bottom: 59px;
+    padding-right: 61px;
+    padding-left: 61px;
   }
 }
 
 .feedback-form__legend--review {
   @media (min-width: $tablet-width) {
-    margin-bottom: 42px;
+    margin-bottom: 54px;
     padding-right: 62px;
     padding-left: 60px;
   }
@@ -250,7 +288,13 @@
 }
 
 .feedback-form__item--checkbox {
-  margin-bottom: 31px;
+  @media (max-width: $mobile-width) {
+    margin-bottom: 43px;
+
+    &:last-child {
+      margin-bottom: 14px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     flex-basis: 35%;
@@ -259,7 +303,7 @@
 
   @media (min-width: $desktop-width) {
     flex-basis: 25%;
-    margin-bottom: 23px;
+    margin-bottom: 54px;
   }
 }
 
@@ -267,9 +311,9 @@
   width: 100%;
   height: 58px;
   padding-top: 18px;
-  padding-right: 22px;
+  padding-right: 19px;
   padding-bottom: 14px;
-  padding-left: 22px;
+  padding-left: 19px;
 
   font-family: inherit;
 
@@ -308,20 +352,24 @@
   position: relative;
 
   display: block;
-  padding-left: 79px;
+  padding-left: 75px;
 
   font-weight: bold;
   font-size: 18px;
   text-transform: none;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 79px;
+  }
 }
 
 .feedback-form__input-checkbox + label::before {
   position: absolute;
   left: 0;
-  top: -9px;
+  top: -13px;
 
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
 
   background-color: $grey;
 
@@ -333,6 +381,10 @@
 
   &:active {
     background-color: $white;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 4px;
   }
 }
 
@@ -351,8 +403,8 @@
 
 .feedback-form__input-checkbox:checked + label::after {
   position: absolute;
-  left: 13px;
-  top: 7px;
+  left: 15px;
+  top: 6px;
 
   width: 23px;
   height: 16px;
@@ -369,16 +421,23 @@
 
 .feedback-form__input-checkbox--round:checked + label::after {
   position: absolute;
-  left: 15px;
-  top: 6px;
+  left: 18px;
+  top: 4px;
 
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
 
   border-radius: 50%;
   background-color: $black;
 
   content: "";
+
+  @media (min-width: $desktop-width) {
+    left: 23px;
+
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .feedback-form__icon {
@@ -410,7 +469,7 @@
 .feedback-form__review-text {
   width: 100%;
   height: 160px;
-  padding: 13px 20px;
+  padding: 17px 20px;
   margin-bottom: 51px;
 
   font-family: inherit;
@@ -440,6 +499,21 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     right: 20px;
-    bottom: 40px;
+    bottom: 29px;
+  }
+}
+
+.feedback-form__item--position {
+  @media (max-width: $mobile-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 33px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 29px;
   }
 }

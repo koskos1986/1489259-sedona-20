@@ -1,5 +1,5 @@
 .review__title {
-  margin-top: 30px;
+  margin-top: 31px;
   margin-bottom: 28px;
 
   font-weight: bold;
@@ -8,7 +8,7 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 65px;
-    margin-bottom: 31px;
+    margin-bottom: 33px;
 
     font-size: 30px;
     line-height: 26px;
@@ -62,7 +62,7 @@
 .review__item img {
   @media (max-width: $mobile-width) {
     display: block;
-    margin-top: 22px;
+    margin-top: 20px;
     margin-right: $margin-mobile-photo;
     margin-left: $margin-mobile-photo;
   }
@@ -119,7 +119,7 @@
 }
 
 .review__caption-wrapper {
-  padding-top: 11px;
+  padding-top: 5px;
   padding-right: 20px;
   padding-bottom: 15px;
   padding-left: 20px;
@@ -150,8 +150,6 @@
 }
 
 .review__text-wrapper {
-  margin-bottom: 13px;
-
   @media (min-width: $tablet-width) {
     align-self: center;
   }
@@ -161,6 +159,10 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 3px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: -7px;
@@ -182,7 +184,7 @@
   margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
-    margin-right: 9px;
+    margin-right: 12px;
   }
 }
 
