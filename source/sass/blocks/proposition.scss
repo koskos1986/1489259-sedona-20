@@ -75,6 +75,10 @@
 }
 
 .proposition__form-button {
+  display: block;
+  padding-top: 16px;
+  text-align: center;
+
   &:disabled {
     background-color: $grey-hover;
   }

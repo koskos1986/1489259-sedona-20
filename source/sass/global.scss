@@ -28,20 +28,16 @@ img {
   height: auto;
 }
 
-.page {
-  height: 100%;
-}
-
 .page-body {
   min-height: 100%;
+  margin: 0;
   font-style: normal;
   font-size: 14px;
   line-height: 26px;
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   color: $black;
-  //background-color: $grey;
-  //box-shadow: 0 0 10px $basic-body-shadow;
+  background-color: $grey-body;
 }
 
 .site-list {
@@ -91,6 +87,8 @@ img {
   max-width: $block-width-mobile;
   margin-left: auto;
   margin-right: auto;
+  background-color: $white;
+
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-max-width;
@@ -98,6 +96,7 @@ img {
 
   @media (min-width: $desktop-width) {
     max-width: 1200px;
+    box-shadow: 0 15px 15px $basic-body-shadow;
   }
 }
 

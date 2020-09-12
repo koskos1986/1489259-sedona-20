@@ -3,7 +3,7 @@
   width: auto;
 
   @media (min-width: $tablet-width) {
-    padding-top: 16px;
+    padding-top: 14px;
     padding-bottom: 14px;
   }
 }
@@ -56,8 +56,8 @@
   top: 9px;
   right: 20px;
 
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
 
   &::before,
   &::after {
@@ -224,12 +224,12 @@
 
 .main-nav__item:nth-child(4n+3) {
   @media (min-width: $tablet-width) {
-    text-align: right;
+    text-align: center;
   }
 }
 
 .main-nav__item:nth-child(4n+4) {
   @media (min-width: $tablet-width) {
-    text-align: right;
+    text-align: center;
   }
 }

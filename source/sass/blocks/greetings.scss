@@ -8,6 +8,7 @@
   background-image: url("../img/bg-back-mobile@1x.jpg"), linear-gradient(to right bottom, $bground-greetings-gradient-from, $bground-greetings-gradient-to);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center bottom;
 
   @media (max-width: $mobile-width) {
     @media (min-resolution: 2dppx) {

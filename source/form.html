@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Форма отзыва</title>
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <!-- Pixel Glass -->
     <style>
@@ -114,7 +116,7 @@
               <ul class="feedback-form__list site-list feedback-form__list--contact">
                 <li class="feedback-form__item feedback-form__item--contact">
                   <label class="feedback-form__label" for="phone"><span class="hidden">Контактный</span> телефон*:</label>
-                  <input class="feedback-form__input feedback-form__input--contact" id="phone" type="text" placeholder="Введите телефон" required>
+                  <input class="feedback-form__input feedback-form__input--contact" id="phone" type="tel" placeholder="Введите телефон" required>
                   <span class="feedback-form__icon">
                     <svg width="18" height="18">
                       <use xlink:href="#icon-phone"></use>
@@ -123,7 +125,7 @@
                 </li>
                 <li class="feedback-form__item feedback-form__item--contact">
                   <label class="feedback-form__label" for="email">Электронная почта*:</label>
-                  <input class="feedback-form__input feedback-form__input--contact" id="email" type="text" placeholder="Введите e-mail" required>
+                  <input class="feedback-form__input feedback-form__input--contact" id="email" type="email" placeholder="Введите e-mail" required>
                   <span class="feedback-form__icon feedback-form__icon--email">
                     <svg width="16" height="12">
                       <use xlink:href="#icon-email"></use>
@@ -220,12 +222,12 @@
         </a>
       </div>
     </footer>
-      <section class="popup popup--error">
+      <section class="popup popup--error popup-hidden">
         <h2 class="popup__title title">Что-то пошло <br>не так!</h2>
         <p class="popup__text text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="popup__button form-button button" type="button">Ок</button>
       </section>
-      <section class="popup popup--success">
+      <section class="popup popup--success popup-hidden">
         <div class="popup__wrapper">
           <h2 class="popup__title title">Ваш отзыв отправлен!</h2>
           <p class="popup__text text">Спасибо за Ваше участие, Ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте</p>
