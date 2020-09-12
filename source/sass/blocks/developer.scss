@@ -27,6 +27,10 @@
 .developer__link {
   display: block;
   margin-left: 12px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 3px;
+  }
 }
 
 .developer svg {

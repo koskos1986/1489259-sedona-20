@@ -7,3 +7,9 @@
     align-items: center;
   }
 }
+
+.page-footer__contacts--photo {
+  @media (max-width: $mobile-width) {
+    margin-top: 54px;
+  }
+}
