@@ -29,22 +29,31 @@
 
   @media (min-width: $tablet-width) {
     margin-right: 160px;
-    margin-bottom: 44px;
+    margin-bottom: 61px;
     margin-left: 158px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 378px;
-    margin-bottom: 33px;
+    margin-bottom: 50px;
     margin-left: 372px;
   }
 }
 
 .feedback-form {
+  padding-bottom: 11px;
+
+  & div:nth-child(4) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    padding: 17px 40px 43px 40px;
+    padding-top: 17px;
+    padding-right: 60px;
+    padding-bottom: 59px;
+    padding-left: 60px;
 
     & div:nth-child(3) {
       flex-basis: 50%;
@@ -66,22 +75,34 @@
 
     & div:nth-child(1) {
       flex-basis: 50%;
-      margin-bottom: 26px;
+      margin-bottom: 70px;
     }
 
     & div:nth-child(2) {
-      margin-bottom: 14px;
+      margin-bottom: 48px;
+    }
+
+    & div:nth-child(4) {
+      margin-bottom: 32px;
     }
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 7px;
-    padding-right: 100px;
-    padding-bottom: 47px;
-    padding-left: 100px;
+    padding-right: 120px;
+    padding-bottom: 61px;
+    padding-left: 120px;
+
+    & div:nth-child(1) {
+      margin-bottom: 70px;
+    }
 
     & div:nth-child(2) {
-      margin-top: -4px;
+      margin-bottom: 53px;
+    }
+
+    & div:nth-child(4) {
+      margin-bottom: 29px;
     }
   }
 }
@@ -137,7 +158,7 @@
 
 .feedback-form__legend {
   margin-right: auto;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   margin-left: auto;
 
   font-weight: bold;
@@ -157,11 +178,11 @@
 
 .feedback-form__legend--meeting {
   @media (min-width: $tablet-width) {
-    margin-left: 37px;
+    margin-left: 54px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 58px;
+    margin-left: 77px;
   }
 }
 
@@ -171,7 +192,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 71px;
     margin-left: 0;
   }
 
@@ -182,7 +203,7 @@
 
 .feedback-form__legend--contact {
   @media (max-width: $mobile-width) {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
 
   @media (min-width: $tablet-width) {
@@ -201,7 +222,7 @@
 .feedback-form__legend--places {
   padding-left: 11px;
   padding-right: 21px;
-  margin-bottom: 31px;
+  margin-bottom: 34px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -212,6 +233,8 @@
 }
 
 .feedback-form__legend--review {
+  margin-bottom: 17px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 54px;
     padding-right: 62px;
@@ -239,6 +262,10 @@
   }
 
   @media (min-width: $tablet-width) {
+    &--meeting {
+      margin-left: 19px;
+    }
+
     &--meeting label {
       padding-left: 38px;
     }
@@ -246,7 +273,11 @@
 
   @media (min-width: $desktop-width) {
     &--meeting label {
-      padding-left: 59px;
+      padding-left: 81px;
+    }
+
+    &--meeting {
+      margin-left: 0;
     }
   }
 }
@@ -257,7 +288,7 @@
 
   & label {
     margin-bottom: 8px;
-    margin-left: 20px;
+    margin-left: 22px;
   }
 
   &:not(:last-child) {
@@ -276,6 +307,7 @@
     align-items: center;
 
     & label {
+      margin-top: 2px;
       margin-right: 17px;
       margin-bottom: 0;
       margin-left: 0;
@@ -310,10 +342,10 @@
 .feedback-form__input {
   width: 100%;
   height: 58px;
-  padding-top: 18px;
+  padding-top: 15px;
   padding-right: 19px;
   padding-bottom: 14px;
-  padding-left: 19px;
+  padding-left: 18px;
 
   font-family: inherit;
 
@@ -340,9 +372,23 @@
     background-color: $white;
     border-color: $grey-hover;
   }
+
+  &:invalid {
+    border-color: $invalid;
+  }
 }
 
 .feedback-form__input--contact {
+  width: 222px;
+
+  &:hover {
+    background-color: $grey-hover;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 91%;
+  }
+
   @media (min-width: $desktop-width) {
     width: 257px;
   }
@@ -352,11 +398,15 @@
   position: relative;
 
   display: block;
-  padding-left: 75px;
+  padding-left: 78px;
 
   font-weight: bold;
   font-size: 18px;
   text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 76px;
+  }
 
   @media (min-width: $desktop-width) {
     padding-left: 79px;
@@ -403,8 +453,8 @@
 
 .feedback-form__input-checkbox:checked + label::after {
   position: absolute;
-  left: 15px;
-  top: 6px;
+  left: 16px;
+  top: 5px;
 
   width: 23px;
   height: 16px;
@@ -412,6 +462,11 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   content: "";
+
+  @media (min-width: $desktop-width) {
+    left: 20px;
+    top: 4px;
+  }
 }
 
 .feedback-form__input-checkbox:active + label::after,
@@ -433,11 +488,15 @@
   content: "";
 
   @media (min-width: $desktop-width) {
-    left: 23px;
+    left: 21px;
 
     width: 20px;
     height: 20px;
   }
+}
+
+.input:invalid:not(:placeholder-shown) {
+  border-color: blue;
 }
 
 .feedback-form__icon {
@@ -461,26 +520,51 @@
 }
 
 .feedback-form__icon--email {
+  padding-top: 15px;
+
   @media (min-width: $desktop-width) {
     right: 2px;
+    padding-top: 17px;
   }
 }
 
 .feedback-form__review-text {
   width: 100%;
   height: 160px;
-  padding: 17px 20px;
-  margin-bottom: 51px;
+  padding-top: 11px;
+  padding-right: 20px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  margin-bottom: 45px;
 
   font-family: inherit;
 
-  border: none;
+  border: 4px solid transparent;
 
   background-color: $grey;
 
   &::placeholder {
     font-weight: bold;
     font-size: 18px;
+  }
+
+  &:hover {
+    background-color: $grey-hover;
+  }
+
+  &:active {
+    background-color: $white;
+    border-color: $grey-hover;
+  }
+
+  &:focus {
+    background-color: $white;
+    border-color: $grey-hover;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+    padding-top: 17px;
   }
 }
 
@@ -498,8 +582,8 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    right: 20px;
-    bottom: 29px;
+    right: 0;
+    bottom: 15px;
   }
 }
 
@@ -509,11 +593,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-left: 33px;
     margin-bottom: 63px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 29px;
+    margin-left: 35px;
   }
 }

@@ -8,8 +8,16 @@
   }
 }
 
-.page-footer__contacts--photo {
+.page-footer--photo {
   @media (max-width: $mobile-width) {
-    margin-top: 54px;
+    padding-top: 97px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
   }
 }
